@@ -1,217 +1,68 @@
-# Professional Portfolio Website
+# Anisha Salunkhe - Portfolio
 
-A modern, responsive portfolio website showcasing cloud architecture expertise, technical skills, and professional experience. Built with vanilla HTML, CSS, and JavaScript for optimal performance and easy customization.
+My personal portfolio website showcasing my experience as a Cloud Applications Architect at Amazon Web Services.
 
-## 🌟 Features
+## 🌐 Live Site
 
-- **Responsive Design**: Fully responsive across all devices (desktop, tablet, mobile)
-- **Interactive Animations**: Smooth transitions, hover effects, and particle animations
-- **Custom Cursor**: Unique cursor design for enhanced user experience
-- **About Me Slider**: Interactive carousel showcasing professional highlights
-- **Expandable Sections**: Collapsible experience and project details for clean presentation
-- **AWS Service Logos**: Professional display of AWS certifications and skills with official logos
-- **Dark Theme**: Modern dark color scheme with green accent (#10b981)
-- **Performance Optimized**: Fast loading with minimal dependencies
+[View Portfolio](https://anisha-salunkhe.github.io) *(Update with your actual URL)*
 
-## 🚀 Quick Start
+## 📋 About
 
-### Option 1: GitHub Pages (Recommended)
+This portfolio highlights my 6+ years of experience in cloud architecture, serverless systems, and full-stack development. It features:
 
-1. **Create GitHub Repository**
-   - Go to [GitHub](https://github.com) and create a new repository
-   - Name it `yourusername.github.io` (replace with your GitHub username)
-   - Make it public
+- **Professional Experience**: 8 positions from AWS Cloud Applications Architect to internships
+- **Key Projects**: 10 major projects including enterprise WorkOrder systems, payment processing, and IAM automation
+- **Technical Skills**: 50+ technologies across AWS services, programming languages, and DevOps tools
+- **Certifications**: 12 AWS and industry certifications including Solutions Architect Professional and DevOps Professional
+- **Education**: MS in Information Systems (NYU) and BE in Computer Engineering (University of Pune)
 
-2. **Push Code to GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio commit"
-   git remote add origin https://github.com/yourusername/yourusername.github.io.git
-   git branch -M main
-   git push -u origin main
-   ```
+## 🎯 Highlights
 
-3. **Enable GitHub Pages**
-   - Go to repository Settings → Pages
-   - Select "Deploy from a branch"
-   - Choose "main" branch and "/ (root)" folder
-   - Save
+- Architected systems processing **1M+ WorkOrders** with sub-second latency
+- Reduced operational overhead by **50%**, eliminating **21,000 manual hours annually**
+- Increased payment acceptance by **32%** for international cinema chain
+- Deployed governance across **1000+ AWS accounts**
+- Built enterprise messaging platform serving **2000+ clients** with **99.99% uptime**
 
-4. **Access Your Site**
-   - Your portfolio will be live at: `https://yourusername.github.io`
-   - Wait 2-5 minutes for initial deployment
+## 🛠️ Built With
 
-### Option 2: Local Development
+- HTML5, CSS3, JavaScript (Vanilla)
+- Font Awesome 6.5.1
+- Google Fonts (Space Grotesk, JetBrains Mono)
+- Credly badge embeds
 
-1. **Clone or Download**
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
+## 🚀 Running Locally
 
-2. **Open in Browser**
-   - Simply open `index.html` in your web browser
-   - Or use a local server:
-   ```bash
-   # Python 3
-   python -m http.server 8000
-   
-   # Node.js
-   npx serve
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/Anisha-Salunkhe/portfolio.git
+cd portfolio
 
-## 📁 Project Structure
+# Open in browser
+open index.html
+
+# Or run with Python server
+python -m http.server 8000
+```
+
+## 📁 Structure
 
 ```
 portfolio/
-├── index.html              # Main HTML file
-├── style.css               # All styles and animations
-├── images/                 # Image assets
-│   ├── aws_sdk.png        # AWS SDK logo
-│   ├── aws_lambda.png     # Lambda logo
-│   ├── DynamoDB.png       # DynamoDB logo
-│   └── ...                # Other AWS service logos
-├── Anisha_Salunkhe_Resume.pdf  # Resume PDF
-├── README.md              # This file
-├── DEPLOYMENT.md          # Deployment guide
-└── .gitignore            # Git ignore file
+├── index.html                      # Main site
+├── style.css                       # Styles and animations
+├── images/                         # AWS service logos
+└── Anisha_Salunkhe_Resume.pdf     # Resume download
 ```
-
-## 🎨 Customization Guide
-
-### 1. Personal Information
-
-**Update in `index.html`:**
-
-```html
-<!-- Hero Section -->
-<h1 class="hero-name"><span class="typing-effect">Your Name</span></h1>
-<h2 class="hero-title">Your Title</h2>
-
-<!-- Contact Section -->
-<a href="mailto:your.email@example.com">Email</a>
-<a href="https://github.com/yourusername">GitHub</a>
-<a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-```
-
-### 2. Color Scheme
-
-**Update in `style.css` (`:root` section):**
-
-```css
-:root {
-    --primary: #10b981;      /* Main green color */
-    --secondary: #34d399;    /* Secondary green */
-    --accent: #6ee7b7;       /* Accent green */
-    --dark: #0a0a0a;         /* Background dark */
-    --light: #1a1a1a;        /* Card background */
-}
-```
-
-### 3. Logo
-
-**Update in `index.html` (navigation):**
-
-```html
-<h1 class="logo"><a href="#hero">YI</a></h1>  <!-- Your Initials -->
-```
-
-### 4. Content Sections
-
-Each section can be customized by editing the corresponding HTML in `index.html`:
-
-- **About**: Update `.about-card` content
-- **Experience**: Modify `.experience-item` entries
-- **Projects**: Edit `.project-card` details
-- **Skills**: Add/remove `.skill-item` entries
-- **Education**: Update `.education-item` content
-- **Certifications**: Modify `.cert-item` links
-
-### 5. Images
-
-Replace images in the `images/` folder:
-- AWS service logos (60x60px recommended)
-- Profile photos
-- Project screenshots
-
-### 6. Resume
-
-Replace `Anisha_Salunkhe_Resume.pdf` with your own PDF resume.
-
-## 🛠️ Technical Stack
-
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with animations
-- **JavaScript**: Vanilla JS for interactivity
-- **Fonts**: 
-  - Space Grotesk (headings and body)
-  - JetBrains Mono (code/technical text)
-- **Icons**: Font Awesome 6.5.1
-- **External**: Credly badge embed script
-
-## 🎯 Key Components
-
-### Custom Cursor
-Interactive cursor that follows mouse movement with smooth animations.
-
-### Particle Animation
-Floating particles in hero section for visual interest.
-
-### About Me Slider
-3-card carousel with navigation arrows and dots:
-- Professional Role
-- Impact & Results
-- Expertise
-
-### Expandable Sections
-"Show More/Less" buttons for:
-- Experience details
-- Project descriptions
-- Achievement information
-
-### Interactive Skills
-Hover effects on skill items with:
-- 3D rotation animations
-- Glow effects
-- Scale transformations
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: 480px - 767px
-- **Small Mobile**: Below 480px
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📝 License
-
-This project is open source and available for personal and commercial use.
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio!
 
 ## 📧 Contact
 
-For questions or suggestions, reach out via:
-- Email: anisha.salunkhe@gmail.com
-- GitHub: [@Anisha-Salunkhe](https://github.com/Anisha-Salunkhe)
-- LinkedIn: [anishasalunkhe](https://linkedin.com/in/anishasalunkhe)
-
-## 🙏 Acknowledgments
-
-- Font Awesome for icons
-- Google Fonts for typography
-- AWS for service logos
-- Credly for certification badges
+- **Email**: anisha.salunkhe@gmail.com
+- **GitHub**: [@Anisha-Salunkhe](https://github.com/Anisha-Salunkhe)
+- **LinkedIn**: [anishasalunkhe](https://linkedin.com/in/anishasalunkhe)
+- **Stack Overflow**: [anisha-salunkhe](https://stackoverflow.com/users/6170603/anisha-salunkhe)
+- **Credly**: [anisha-salunkhe](https://www.credly.com/users/anisha-salunkhe.3fb7b79e)
 
 ---
 
-**Made with ❤️ by Anisha Salunkhe**
+© 2025 Anisha Salunkhe | Jersey City, NJ
