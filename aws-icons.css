@@ -1,0 +1,21 @@
+.aws-lambda::before { content: 'λ'; font-weight: bold; }
+.aws-s3::before { content: '🪣'; }
+.aws-dynamodb::before { content: '⚡'; }
+.aws-ec2::before { content: '🖥️'; }
+.aws-eventbridge::before { content: '🔄'; }
+.aws-vpc::before { content: '🌐'; }
+.aws-cloudformation::before { content: '📋'; }
+.aws-amplify::before { content: '⚡'; }
+.aws-codepipeline::before { content: '🔧'; }
+.aws-codebuild::before { content: '🏗️'; }
+.aws-codedeploy::before { content: '🚀'; }
+.aws-athena::before { content: '🔍'; }
+.aws-redshift::before { content: '📊'; }
+.aws-quicksight::before { content: '📈'; }
+.aws-stepfunctions::before { content: '⚙️'; }
+.aws-sqs::before { content: '📬'; }
+.aws-apigateway::before { content: '🚪'; }
+.aws-iam::before { content: '🔐'; }
+.aws-kms::before { content: '🔑'; }
+.aws-waf::before { content: '🛡️'; }
+.aws-route53::before { content: '🌍'; }
