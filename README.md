@@ -4,7 +4,7 @@ My personal portfolio website showcasing my experience as a Cloud Applications A
 
 ## 🌐 Live Site
 
-[View Portfolio](https://anisha-salunkhe.github.io) *(Update with your actual URL)*
+[View Portfolio]([https://anisha-salunkhe.github.io](https://anisha-salunkhe.github.io/anisha-salunkhe/)) *(Update with your actual URL)*
 
 ## 📋 About
 
