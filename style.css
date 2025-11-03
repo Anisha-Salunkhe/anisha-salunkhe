@@ -2,37 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
 }
 
-.custom-cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #10b981;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all 0.15s ease;
-    transform: translate(-50%, -50%);
+@media (hover: hover) and (pointer: fine) {
+    * {
+        cursor: none;
+    }
 }
 
-.custom-cursor-dot {
-    width: 6px;
-    height: 6px;
-    background: #10b981;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10000;
-    transition: all 0.05s ease;
-    transform: translate(-50%, -50%);
+@media (hover: hover) and (pointer: fine) {
+    .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #10b981;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: all 0.15s ease;
+        transform: translate(-50%, -50%);
+    }
+
+    .custom-cursor-dot {
+        width: 6px;
+        height: 6px;
+        background: #10b981;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 10000;
+        transition: all 0.05s ease;
+        transform: translate(-50%, -50%);
+    }
 }
 
-a:hover,
-button:hover,
-.btn:hover {
-    cursor: none;
+@media (hover: hover) and (pointer: fine) {
+    a:hover,
+    .btn:hover {
+        cursor: none;
+    }
 }
 
 :root {
@@ -362,6 +370,7 @@ nav a {
 .subtitle-tech {
     color: #10b981;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .hero-stats {
@@ -633,7 +642,7 @@ h2 i {
 
 .slider-container {
     position: relative;
-    min-height: 450px;
+    height: 450px;
 }
 
 .about-grid {
@@ -651,6 +660,8 @@ h2 i {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(16, 185, 129, 0.2);
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     opacity: 0;
     transform: translateX(100px);
@@ -822,7 +833,7 @@ h2 i {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(16, 185, 129, 0.2);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .project-card .glow-effect {
@@ -1365,12 +1376,14 @@ footer p {
     border-radius: 25px;
     font-size: 1.2rem;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 1rem;
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     position: relative;
     overflow: hidden;
+    pointer-events: auto !important;
+    z-index: 100;
 }
 
 .expand-btn::before {
