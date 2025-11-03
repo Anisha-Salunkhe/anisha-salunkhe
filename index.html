@@ -10,20 +10,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.credly.com/assets/utilities/embed.js" async></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4G89D9P66"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Z4G89D9P66');
+    </script>
 </head>
 <body>
     <div class="custom-cursor"></div>
     <div class="custom-cursor-dot"></div>
-    <script>
-        const cursor = document.querySelector('.custom-cursor');
-        const cursorDot = document.querySelector('.custom-cursor-dot');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
-        });
-    </script>
     <nav>
         <div class="container">
             <h1 class="logo"><a href="#hero">AS</a></h1>
@@ -43,17 +42,6 @@
 
     <section id="hero">
         <div class="particles"></div>
-        <script>
-            const particles = document.querySelector('.particles');
-            for(let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-                particles.appendChild(particle);
-            }
-        </script>
         <div class="hero-content">
             <div class="hero-intro">
                 <span class="hero-greeting">Hello World, I'm</span>
@@ -134,29 +122,6 @@
             </div>
         </div>
     </section>
-    <script>
-        let currentSlideIndex = 0;
-        function changeSlide(n) {
-            showSlide(currentSlideIndex + n);
-        }
-        function currentSlide(n) {
-            showSlide(n);
-        }
-        function showSlide(n) {
-            const cards = document.querySelectorAll('.about-card');
-            const dots = document.querySelectorAll('.dot');
-            
-            if (n >= cards.length) { currentSlideIndex = 0; }
-            else if (n < 0) { currentSlideIndex = cards.length - 1; }
-            else { currentSlideIndex = n; }
-            
-            cards.forEach(card => card.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            cards[currentSlideIndex].classList.add('active');
-            dots[currentSlideIndex].classList.add('active');
-        }
-    </script>
 
     <section id="experience">
         <div class="container">
@@ -171,7 +136,7 @@
                         <li>Reduced operational overhead by <strong>50%</strong>, eliminating <strong>21,000 manual hours annually</strong></li>
                         <li>Accelerated content delivery by <strong>40%</strong> and reduced QC processing by <strong>60%</strong></li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Spearheaded enterprise cloud transformation initiatives as Architect, defining technical strategy and architectural roadmaps for Fortune 500 media and entertainment conglomerates</li>
                         <li>Architected enterprise-scale WorkOrder Management System for major film studio leveraging Netflix Conductor orchestration engine—delivering sub-second query latency at 1M+ WorkOrders scale with 99.9% uptime SLA</li>
@@ -190,7 +155,7 @@
                         <li>Reduced IAM provisioning overhead by <strong>60%</strong> for pharmaceutical enterprise</li>
                         <li>Deployed governance across <strong>1000+ AWS accounts</strong></li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Partnered with Fortune 500 enterprises and AWS service teams to architect and execute large-scale cloud migrations, delivering zero-downtime transitions while enforcing architectural best practices and Well-Architected Framework principles</li>
                         <li>Orchestrated complex technical engagements spanning HPC workloads, real-time streaming analytics, batch processing pipelines, and cloud-native infrastructure modernization across diverse industry verticals</li>
@@ -208,7 +173,7 @@
                         <li>Built AWS migration tool with <strong>3-tier architecture</strong> orchestrating <strong>8 AWS services</strong></li>
                         <li>Implemented real-time logging with CloudWatch integration</li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Engineered customer-facing AWS migration tool with remote execution capabilities, streamlining cloud adoption workflows and dramatically reducing migration complexity for enterprise customers</li>
                         <li>Designed scalable 3-tier architecture orchestrating 8 AWS services using Python and Boto3 SDK, ensuring modularity, maintainability, and extensibility</li>
@@ -223,7 +188,7 @@
                         <li>Built intelligent automation with <strong>RPA and UiPath</strong></li>
                         <li>Led agile ceremonies and managed sprint deliverables</li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Built intelligent automation systems leveraging RPA and UiPath, eliminating repetitive manual processes and dramatically improving operational efficiency across university IT operations</li>
                         <li>Developed secure reporting systems with encrypted confidential data handling, automated workflow orchestration, and role-based access controls</li>
@@ -238,7 +203,7 @@
                         <li>Mentored <strong>38 students</strong> in Computer Science fundamentals</li>
                         <li>Evaluated <strong>11 technical assignments</strong> with comprehensive code reviews</li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Mentored 38 students in Introduction to Computer Science, cultivating algorithmic thinking, problem-solving skills, and programming fundamentals in Python</li>
                         <li>Evaluated 11 technical assignments with comprehensive code reviews, delivering constructive feedback and optimization recommendations to elevate code quality and performance</li>
@@ -254,7 +219,7 @@
                         <li>Optimized performance by <strong>13.67%</strong>, achieving <strong>3780 TPS</strong></li>
                         <li>Onboarded <strong>650+ clients</strong> with zero critical bugs</li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Spearheaded end-to-end development of Axon™ enterprise messaging platform serving 2000+ production clients across 4 geo-distributed data centers, consistently achieving 99.99% uptime SLA</li>
                         <li>Built high-throughput messaging infrastructure using Java, Scala, and Bash scripting with Confluent Kafka and NATS messaging systems, delivering sub-millisecond message latency at scale</li>
@@ -273,7 +238,7 @@
                         <li>Built IoT platform with <strong>71 Raspberry Pi nodes</strong> for factory monitoring</li>
                         <li>Transformed paper-based workflows to digital with MySQL database</li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Engineered end-to-end IoT digitization platform for industrial manufacturing facility with 3 core modules: Live Display for real-time monitoring, Workstation Digitization for production tracking, and Daily Maintenance Records for compliance management</li>
                         <li>Architected distributed Master-Slave system deploying 71 Raspberry Pi nodes with wireless mesh networking topology, enabling real-time production monitoring and data aggregation across factory floor</li>
@@ -289,7 +254,7 @@
                         <li>Developed custom <strong>Jenkins plugin</strong> for CI/CD automation</li>
                         <li>Implemented comprehensive testing suite with UAT cases</li>
                     </ul>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More'">+ Show More</button>
+                    <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Developed custom Jenkins plugin for QualiDI™ App, automating CI/CD pipelines to enable continuous integration, automated testing, and streamlined deployment workflows</li>
                         <li>Implemented comprehensive integration testing suite with user acceptance test (UAT) cases and functional validation frameworks, ensuring software quality and reliability</li>
@@ -308,7 +273,7 @@
                     <div class="glow-effect"></div>
                     <h3>Enterprise WorkOrder Management System - Film Studio</h3>
                     <p class="project-summary"><strong>1M+ WorkOrders</strong> • <strong>50% overhead reduction</strong> • <strong>21,000 hours saved annually</strong></p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Architected enterprise-scale orchestration platform for major film studio processing 1M+ WorkOrders using Netflix Conductor workflow engine and DynamoDB, delivering millisecond-latency queries. Implemented event-driven microservices with EventBridge and Lambda, slashing operational overhead by 50%—eliminating 21,000 manual hours annually while accelerating content delivery pipelines.</p>
                     <div class="tags">
                         <span>Netflix Conductor</span>
@@ -322,7 +287,7 @@
                     <div class="glow-effect"></div>
                     <h3>Media Processing Integration</h3>
                     <p class="project-summary"><strong>40% faster delivery</strong> • <strong>60% reduction in QC cycles</strong></p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Integrated third-party media processing engines with AWS Step Functions state machines and S3, unlocking massively parallel transcoding capabilities. Accelerated delivery by 40% through optimized parallel workflows, implemented intelligent exception handling with automated QC validation, slashing processing cycles by 60%.</p>
                     <div class="tags">
                         <span>Step Functions</span>
@@ -335,7 +300,7 @@
                     <div class="glow-effect"></div>
                     <h3>Scalable Payment Service - Cinema Chain</h3>
                     <p class="project-summary"><strong>32% increase</strong> in payment acceptance • Multi-region failover</p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Engineered highly available payment processing service for international cinema chain with multi-region failover. Built RESTful microservices with intelligent retry logic and circuit breakers, driving 32% increase in payment acceptance across Americas through resilient API design.</p>
                     <div class="tags">
                         <span>AWS Lambda</span>
@@ -348,7 +313,7 @@
                     <div class="glow-effect"></div>
                     <h3>IAM Active Directory Sync - Pharmaceutical Enterprise</h3>
                     <p class="project-summary"><strong>60% reduction</strong> in manual overhead • <strong>1000+ AWS accounts</strong></p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Delivered enterprise IAM automation platform for global pharmaceutical company, transforming user-based permissions to role-based access control (RBAC). Engineered Active Directory synchronization with automated role provisioning and lifecycle management, eliminating 60% of manual overhead. Deployed at scale across 1000+ AWS accounts.</p>
                     <div class="tags">
                         <span>AWS IAM</span>
@@ -362,7 +327,7 @@
                     <div class="glow-effect"></div>
                     <h3>VPCx Console - Self-Service Portal</h3>
                     <p class="project-summary">Serverless architecture • Eliminated infrastructure costs</p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Developed serverless self-service portal with RESTful APIs powered by AWS Lambda for multi-cloud orchestration. Transformed legacy server-based polling to event-driven serverless architecture, enabling real-time data transformation while eliminating EC2 and database infrastructure costs.</p>
                     <div class="tags">
                         <span>API Gateway</span>
@@ -375,7 +340,7 @@
                     <div class="glow-effect"></div>
                     <h3>Multi-Factor Authentication</h3>
                     <p class="project-summary">Lambda-based OTP • Enhanced security posture</p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Implemented MFA security layer for VPCx console using Lambda-based OTP generation, adding cryptographic time-based authentication beyond traditional credentials—fortifying security posture for pharmaceutical enterprise.</p>
                     <div class="tags">
                         <span>Lambda</span>
@@ -387,7 +352,7 @@
                     <div class="glow-effect"></div>
                     <h3>Flexera Auditing System</h3>
                     <p class="project-summary"><strong>70% reduction</strong> in compliance overhead • Automated reporting</p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Automated license compliance and auditing system for RDS and EC2 fleets. Built scheduled reporting pipeline generating Excel-formatted audit reports, eliminating manual data collection and slashing compliance overhead by 70%.</p>
                     <div class="tags">
                         <span>RDS</span>
@@ -400,7 +365,7 @@
                     <div class="glow-effect"></div>
                     <h3>Enterprise Messaging System - Mastercard</h3>
                     <p class="project-summary"><strong>2000+ clients</strong> • <strong>99.99% uptime</strong> • <strong>3780 TPS</strong></p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Spearheaded development of geo-distributed enterprise messaging platform serving 2000+ production clients with 99.99% uptime. Optimized throughput by 13.67%, achieving 3780 TPS through JVM heap tuning and garbage collection optimization. Maintained SQALE rating "A" via SonarQube static analysis.</p>
                     <div class="tags">
                         <span>Java</span>
@@ -413,7 +378,7 @@
                     <div class="glow-effect"></div>
                     <h3>Breast Cancer Detection ML System</h3>
                     <p class="project-summary"><strong>85.4% accuracy</strong> • Spark MLlib • Decision Tree classifiers</p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Engineered machine learning pipeline for early-stage breast cancer detection using Spark MLlib. Built ETL workflows and trained Decision Tree classifiers on multi-resolution histopathology images, delivering 85.4% prediction accuracy across 4 magnification levels.</p>
                     <div class="tags">
                         <span>Spark</span>
@@ -426,7 +391,7 @@
                     <div class="glow-effect"></div>
                     <h3>Election Forecast Time Series Analysis</h3>
                     <p class="project-summary"><strong>85% accuracy</strong> • Twitter sentiment analysis • Time-series models</p>
-                    <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.previousElementSibling.classList.toggle('hide'); this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details'">+ Details</button>
+                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Built predictive analytics platform using time-series regression models (linear and polynomial) to forecast Democratic Primary Election outcomes. Integrated Twitter sentiment analysis pipeline, delivering 85% prediction accuracy through multi-modal data fusion.</p>
                     <div class="tags">
                         <span>Python</span>
@@ -822,5 +787,23 @@
         <p>&copy; 2025 Anisha Salunkhe. All rights reserved.</p>
         <p>Jersey City, NJ</p>
     </footer>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.expand-btn').forEach(btn => {
+            btn.onclick = function() {
+                const details = this.nextElementSibling;
+                const summary = this.previousElementSibling;
+                details.classList.toggle('show');
+                if (summary && summary.classList.contains('project-summary')) {
+                    summary.classList.toggle('hide');
+                }
+                if (this.textContent.includes('Details')) {
+                    this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details';
+                } else {
+                    this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More';
+                }
+            };
+        });
+    </script>
 </body>
 </html>
