@@ -4,7 +4,7 @@ My personal portfolio website showcasing my experience as a Cloud Applications A
 
 ## 🌐 Live Site
 
-[View Portfolio](https://anisha-salunkhe.github.io/anisha-salunkhe) 
+[View Portfolio](https://anisha-salunkhe.github.io) *(Update with your actual URL)*
 
 ## 📋 About
 
@@ -30,13 +30,14 @@ This portfolio highlights my 6+ years of experience in cloud architecture, serve
 - Font Awesome 6.5.1
 - Google Fonts (Space Grotesk, JetBrains Mono)
 - Credly badge embeds
+- Google Analytics
 
 ## 🚀 Running Locally
 
 ```bash
 # Clone the repository
-git clone https://github.com/Anisha-Salunkhe/anisha-salunkhe.git
-cd anisha-salunkhe
+git clone https://github.com/Anisha-Salunkhe/portfolio.git
+cd portfolio
 
 # Open in browser
 open index.html

@@ -105,9 +105,30 @@ function showSlide(n) {
 /**
  * Toggles visibility of expandable content sections
  * Used for experience details and project descriptions
- * Note: This functionality is handled inline in HTML for simplicity
- * onclick="this.nextElementSibling.classList.toggle('show')"
  */
+function initExpandButtons() {
+    // Handle all expand buttons
+    document.querySelectorAll('.expand-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const details = this.nextElementSibling;
+            const summary = this.previousElementSibling;
+            
+            // Toggle visibility
+            details.classList.toggle('show');
+            if (summary && summary.classList.contains('project-summary')) {
+                summary.classList.toggle('hide');
+            }
+            
+            // Update button text
+            if (this.textContent.includes('Details')) {
+                this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details';
+            } else {
+                this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More';
+            }
+        });
+    });
+}
 
 // ============================================
 // SMOOTH SCROLL
@@ -129,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize particle animation
     initParticles();
+    
+    // Note: Expand buttons handled by inline script
     
     // Log successful initialization
     console.log('Portfolio website initialized successfully!');
