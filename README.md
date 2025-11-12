@@ -36,8 +36,8 @@ This portfolio highlights my 6+ years of experience in cloud architecture, serve
 
 ```bash
 # Clone the repository
-git clone https://github.com/Anisha-Salunkhe/portfolio.git
-cd portfolio
+git clone https://github.com/Anisha-Salunkhe/anisha-salunkhe.git
+cd anisha-salunkhe
 
 # Open in browser
 open index.html
@@ -49,7 +49,7 @@ python -m http.server 8000
 ## 📁 Structure
 
 ```
-portfolio/
+anisha-salunkhe/
 ├── index.html                      # Main site
 ├── style.css                       # Styles and animations
 ├── images/                         # AWS service logos
