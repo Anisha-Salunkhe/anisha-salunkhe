@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize particle animation
     initParticles();
+        // Initialize skills grid mouse wheel horizontal scroll
+    initSkillsScroll();
     
     // Note: Expand buttons handled by inline script
     
@@ -184,3 +186,50 @@ function observeElements() {
 
 // Optional: Uncomment to enable scroll animations
 // observeElements();
+
+// ============================================
+// SKILLS GRID MOUSE WHEEL HORIZONTAL SCROLL
+// ============================================
+/**
+ * Enables horizontal scrolling via mouse wheel on skills icon grids
+ * Converts vertical wheel delta to horizontal scroll
+ * Also supports click-and-drag to scroll
+ */
+function initSkillsScroll() {
+    document.querySelectorAll('.skills-grid').forEach(grid => {
+        // Convert vertical wheel delta to horizontal scroll
+        grid.addEventListener('wheel', function(e) {
+            const hasHorizontalScroll = grid.scrollWidth > grid.clientWidth;
+            if (!hasHorizontalScroll) return;
+            e.preventDefault();
+            grid.scrollLeft += e.deltaY;
+        }, { passive: false });
+
+        // Click-and-drag to scroll
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        grid.addEventListener('mousedown', (e) => {
+            isDown = true;
+            grid.style.cursor = 'grabbing';
+            startX = e.pageX - grid.offsetLeft;
+            scrollLeft = grid.scrollLeft;
+        });
+        grid.addEventListener('mouseleave', () => {
+            isDown = false;
+            grid.style.cursor = 'grab';
+        });
+        grid.addEventListener('mouseup', () => {
+            isDown = false;
+            grid.style.cursor = 'grab';
+        });
+        grid.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - grid.offsetLeft;
+            const walk = (x - startX) * 2;
+            grid.scrollLeft = scrollLeft - walk;
+        });
+    });
+}
