@@ -1030,12 +1030,26 @@ h2 i {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;     overflow-x: auto;     scroll-behavior: smooth;     cursor: grab;     scrollbar-width: thin;     scrollbar-color: #10b981 rgba(16, 185, 129, 0.1);     -webkit-overflow-scrolling: touch;
     gap: 2rem;
+        padding-bottom: 1rem;
+}
+
+.skills-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.skills-grid::-webkit-scrollbar-track {
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 3px;
+}
+.skills-grid::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 3px;
 }
 
 .skill-item {
+        flex: 0 0 140px;
     background: rgba(16, 185, 129, 0.1);
     padding: 1.5rem 1rem;
     border-radius: 10px;
