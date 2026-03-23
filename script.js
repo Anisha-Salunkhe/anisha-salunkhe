@@ -5,45 +5,46 @@
  */
 
 // ============================================
-// CUSTOM CURSOR
+// CUSTOM CURSOR — lag-free via rAF + transform
 // ============================================
-/**
- * Creates a custom cursor that follows mouse movement
- * Provides enhanced visual feedback for user interactions
- */
 function initCustomCursor() {
     const cursor = document.querySelector('.custom-cursor');
     const cursorDot = document.querySelector('.custom-cursor-dot');
-    
+    if (!cursor || !cursorDot) return;
+
+    let mouseX = 0, mouseY = 0;
+    let rafId = null;
+
     document.addEventListener('mousemove', (e) => {
-        // Update cursor position to follow mouse
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        cursorDot.style.left = e.clientX + 'px';
-        cursorDot.style.top = e.clientY + 'px';
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!rafId) {
+            rafId = requestAnimationFrame(updateCursor);
+        }
     });
+
+    function updateCursor() {
+        // Use transform instead of left/top to avoid layout reflow
+        cursor.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+        cursorDot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+        rafId = null;
+    }
 }
 
 // ============================================
 // PARTICLE ANIMATION
 // ============================================
-/**
- * Generates floating particles in the hero section
- * Creates dynamic background animation effect
- */
 function initParticles() {
     const particles = document.querySelector('.particles');
-    const particleCount = 50; // Number of particles to generate
-    
-    for(let i = 0; i < particleCount; i++) {
+    if (!particles) return;
+    const particleCount = 50;
+
+    for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-        
-        // Randomize particle position and animation timing
         particle.style.left = Math.random() * 100 + '%';
         particle.style.animationDelay = Math.random() * 20 + 's';
         particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-        
         particles.appendChild(particle);
     }
 }
@@ -51,50 +52,20 @@ function initParticles() {
 // ============================================
 // ABOUT ME SLIDER
 // ============================================
-/**
- * Manages the About Me section carousel
- * Allows navigation between different professional highlights
- */
 let currentSlideIndex = 0;
 
-/**
- * Changes slide by a given increment
- * @param {number} n - Direction to move (-1 for previous, 1 for next)
- */
-function changeSlide(n) {
-    showSlide(currentSlideIndex + n);
-}
+function changeSlide(n) { showSlide(currentSlideIndex + n); }
+function currentSlide(n) { showSlide(n); }
 
-/**
- * Jumps to a specific slide
- * @param {number} n - Index of slide to show
- */
-function currentSlide(n) {
-    showSlide(n);
-}
-
-/**
- * Displays the specified slide and updates navigation
- * @param {number} n - Index of slide to display
- */
 function showSlide(n) {
     const cards = document.querySelectorAll('.about-card');
     const dots = document.querySelectorAll('.dot');
-    
-    // Handle wraparound for slide navigation
-    if (n >= cards.length) { 
-        currentSlideIndex = 0; 
-    } else if (n < 0) { 
-        currentSlideIndex = cards.length - 1; 
-    } else { 
-        currentSlideIndex = n; 
-    }
-    
-    // Remove active class from all cards and dots
+    if (n >= cards.length) currentSlideIndex = 0;
+    else if (n < 0) currentSlideIndex = cards.length - 1;
+    else currentSlideIndex = n;
+
     cards.forEach(card => card.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
-    
-    // Add active class to current slide and dot
     cards[currentSlideIndex].classList.add('active');
     dots[currentSlideIndex].classList.add('active');
 }
@@ -102,113 +73,37 @@ function showSlide(n) {
 // ============================================
 // EXPANDABLE SECTIONS
 // ============================================
-/**
- * Toggles visibility of expandable content sections
- * Used for experience details and project descriptions
- */
 function initExpandButtons() {
-    // Handle all expand buttons
     document.querySelectorAll('.expand-btn').forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             const details = this.nextElementSibling;
             const summary = this.previousElementSibling;
-            
-            // Toggle visibility
             details.classList.toggle('show');
             if (summary && summary.classList.contains('project-summary')) {
                 summary.classList.toggle('hide');
             }
-            
-            // Update button text
             if (this.textContent.includes('Details')) {
-                this.textContent = this.textContent === '+ Details' ? '− Less' : '+ Details';
+                this.textContent = this.textContent === '+ Details' ? '\u2212 Less' : '+ Details';
             } else {
-                this.textContent = this.textContent === '+ Show More' ? '− Show Less' : '+ Show More';
+                this.textContent = this.textContent === '+ Show More' ? '\u2212 Show Less' : '+ Show More';
             }
         });
     });
 }
 
 // ============================================
-// SMOOTH SCROLL
+// SKILLS GRID — wheel + drag scroll
 // ============================================
-/**
- * Enables smooth scrolling for anchor links
- * Already handled by CSS: html { scroll-behavior: smooth; }
- */
-
-// ============================================
-// INITIALIZATION
-// ============================================
-/**
- * Initialize all interactive features when DOM is loaded
- */
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize custom cursor
-    initCustomCursor();
-    
-    // Initialize particle animation
-    initParticles();
-        // Initialize skills grid mouse wheel horizontal scroll
-    initSkillsScroll();
-    
-    // Note: Expand buttons handled by inline script
-    
-    // Log successful initialization
-    console.log('Portfolio website initialized successfully!');
-});
-
-// ============================================
-// UTILITY FUNCTIONS
-// ============================================
-
-/**
- * Adds animation class when element enters viewport
- * Can be used for scroll-triggered animations
- */
-function observeElements() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-    
-    // Observe all sections for scroll animations
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-}
-
-// Optional: Uncomment to enable scroll animations
-// observeElements();
-
-// ============================================
-// SKILLS GRID MOUSE WHEEL HORIZONTAL SCROLL
-// ============================================
-/**
- * Enables horizontal scrolling via mouse wheel on skills icon grids
- * Converts vertical wheel delta to horizontal scroll
- * Also supports click-and-drag to scroll
- */
 function initSkillsScroll() {
     document.querySelectorAll('.skills-grid').forEach(grid => {
-        // Convert vertical wheel delta to horizontal scroll
-        grid.addEventListener('wheel', function(e) {
-            const hasHorizontalScroll = grid.scrollWidth > grid.clientWidth;
-            if (!hasHorizontalScroll) return;
+        grid.addEventListener('wheel', function (e) {
+            if (grid.scrollWidth <= grid.clientWidth) return;
             e.preventDefault();
             grid.scrollLeft += e.deltaY;
         }, { passive: false });
 
-        // Click-and-drag to scroll
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        let isDown = false, startX, scrollLeft;
 
         grid.addEventListener('mousedown', (e) => {
             isDown = true;
@@ -216,20 +111,23 @@ function initSkillsScroll() {
             startX = e.pageX - grid.offsetLeft;
             scrollLeft = grid.scrollLeft;
         });
-        grid.addEventListener('mouseleave', () => {
-            isDown = false;
-            grid.style.cursor = 'grab';
-        });
-        grid.addEventListener('mouseup', () => {
-            isDown = false;
-            grid.style.cursor = 'grab';
-        });
+        grid.addEventListener('mouseleave', () => { isDown = false; grid.style.cursor = 'grab'; });
+        grid.addEventListener('mouseup', () => { isDown = false; grid.style.cursor = 'grab'; });
         grid.addEventListener('mousemove', (e) => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - grid.offsetLeft;
-            const walk = (x - startX) * 2;
-            grid.scrollLeft = scrollLeft - walk;
+            grid.scrollLeft = scrollLeft - (x - startX) * 2;
         });
     });
 }
+
+// ============================================
+// INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function () {
+    initCustomCursor();
+    initParticles();
+    initSkillsScroll();
+    console.log('Portfolio initialized.');
+});
