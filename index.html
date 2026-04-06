@@ -26,11 +26,15 @@
     <nav>
         <div class="container">
             <h1 class="logo"><a href="#hero">AS</a></h1>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('nav-open')">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#achievements">Awards</a></li>
@@ -51,16 +55,17 @@
             <div class="hero-divider"></div>
             
             <div class="hero-details">
-                <h2 class="hero-title">Cloud Applications Architect & Full-Stack Engineer</h2>
+                <h2 class="hero-title">Cloud Applications Architect & Infrastructure Engineer</h2>
                 <p class="hero-subtitle">
-                    <span class="subtitle-highlight">Building scalable, high-performance distributed systems</span>
+                    <span class="subtitle-highlight">Architecting enterprise-scale cloud infrastructure and distributed systems</span>
                     <br>
-                    <span class="subtitle-specialization">Specializing in <span class="subtitle-tech">Serverless Architecture • Microservices • Cloud-Native Solutions</span></span>
+                    <span class="subtitle-specialization">Specializing in <span class="subtitle-tech">Serverless • Kubernetes • Infrastructure-as-Code • Observability</span></span>
                 </p>
             </div>
             
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View My Work</a>
+                <a href="#publications" class="btn btn-secondary"><i class="fas fa-book-open"></i> Publications</a>
                 <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Let's Connect</a>
             </div>
             
@@ -74,8 +79,12 @@
                     <span class="stat-label">System Uptime</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">6+</span>
+                    <span class="stat-number">8+</span>
                     <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">EKS Clusters Managed</span>
                 </div>
             </div>
         </div>
@@ -89,6 +98,8 @@
                     <div class="about-badges">
                         <span class="badge"><i class="fab fa-aws"></i> AWS Certified</span>
                         <span class="badge"><i class="fas fa-code"></i> Full Stack</span>
+                        <span class="badge"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                        <span class="badge"><i class="fas fa-book"></i> Published Author</span>
                     </div>
                 </div>
                 <div class="about-slider">
@@ -96,7 +107,7 @@
                         <div class="about-card active">
                             <div class="card-icon"><i class="fas fa-briefcase"></i></div>
                             <h3>Professional Role</h3>
-                            <p>Cloud Applications Architect at Amazon Web Services, driving technical strategy and architectural excellence for Fortune 500 enterprises and strategic development partners across entertainment, pharmaceutical, and financial sectors.</p>
+                            <p>Cloud Applications Architect at Amazon Web Services, driving technical strategy and architectural excellence for Fortune 500 enterprises. Published author on AWS Prescriptive Guidance and International Women's Day featured speaker.</p>
                         </div>
                         <div class="about-card">
                             <div class="card-icon"><i class="fas fa-chart-line"></i></div>
@@ -104,9 +115,9 @@
                             <p>Engineered high-performance solutions delivering 32% payment acceptance uplift, 60% operational efficiency gains, and architected distributed systems processing 1M+ WorkOrders—eliminating 21,000 manual hours annually.</p>
                         </div>
                         <div class="about-card">
-                            <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-                            <h3>Expertise</h3>
-                            <p>Deep expertise in cloud-native architecture, serverless orchestration, event-driven microservices, and infrastructure-as-code—delivering resilient, auto-scaling solutions that power mission-critical business operations.</p>
+                            <div class="card-icon"><i class="fas fa-server"></i></div>
+                            <h3>Infrastructure & Observability</h3>
+                            <p>Led enterprise-scale infrastructure initiatives spanning 50+ EKS clusters with DataDog observability, Envoy Gateway API architecture with 166K+ lines of IaC, and production-grade Terraform modules—achieving zero production incidents.</p>
                         </div>
                     </div>
                     <div class="slider-controls">
@@ -145,17 +156,21 @@
                     <p class="duration">November 2023 – Present</p>
                     <ul class="experience-highlights">
                         <li>Architected enterprise WorkOrder Management System processing <strong>1M+ WorkOrders</strong> with sub-second latency</li>
-                        <li>Reduced operational overhead by <strong>50%</strong>, eliminating <strong>21,000 manual hours annually</strong></li>
-                        <li>Accelerated content delivery by <strong>40%</strong> and reduced QC processing by <strong>60%</strong></li>
+                        <li>Built production-grade API Gateway infrastructure with <strong>166K+ lines</strong> of IaC and <strong>zero production incidents</strong></li>
+                        <li>Deployed DataDog observability across <strong>50+ EKS clusters</strong> via reusable Terraform modules</li>
                     </ul>
                     <button class="expand-btn">+ Show More</button>
                     <ul class="experience-details">
                         <li>Spearheaded enterprise cloud transformation initiatives as Architect, defining technical strategy and architectural roadmaps for Fortune 500 media and entertainment conglomerates</li>
                         <li>Architected enterprise-scale WorkOrder Management System for major film studio leveraging Netflix Conductor orchestration engine—delivering sub-second query latency at 1M+ WorkOrders scale with 99.9% uptime SLA</li>
                         <li>Engineered event-driven microservices architecture with EventBridge and Lambda, slashing operational overhead by 50% and eliminating 21,000 manual hours annually through intelligent workflow orchestration</li>
-                        <li>Designed distributed digital asset management platform with Step Functions and S3, unlocking massively parallel processing capabilities and seamless multi-system integration across heterogeneous media production environments</li>
+                        <li>Designed and implemented production-grade API Gateway infrastructure using Envoy Proxy and Kubernetes Gateway API on AWS EKS—217 commits, 166K+ lines of configuration code, 60+ infrastructure packages, zero production incidents</li>
+                        <li>Built reusable Terraform module for DataDog observability stack deployed across 50+ EKS clusters spanning test and performance environments, with DaemonSet agents, Cluster Agent HA, OpenTelemetry collector, and OIDC-based Vault secret management</li>
+                        <li>Implemented four-tag standardization system across all monitored infrastructure, enabling unified filtering, dashboard templating, and cost allocation across DataDog</li>
+                        <li>Designed type-safe bootstrap configuration system in Pkl with circuit breakers, mTLS, TCP keepalive, and HTTP/2 support for Envoy Proxy fleet</li>
+                        <li>Architected zero-trust network security with granular NetworkPolicies, defense-in-depth container security (non-root, read-only filesystem, dropped capabilities), and automated certificate lifecycle management via cert-manager and AWS PrivateCA</li>
                         <li>Integrated third-party media processing pipelines with AWS native services, accelerating content delivery by 40% and slashing QC processing cycles by 60% through optimized parallel execution strategies</li>
-                        <li>AWS Certified DevOps Professional, Solutions Architect Professional, AI Practitioner (2024-2025)</li>
+                        <li>AWS Certified DevOps Professional, Solutions Architect Professional (Renewed 2026), AI Practitioner, ML Associate (2024-2025)</li>
                     </ul>
                 </div>
                 <div class="experience-item">
@@ -412,6 +427,71 @@
                         <span>Analytics</span>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="glow-effect"></div>
+                    <h3>API Gateway Infrastructure — Envoy Proxy</h3>
+                    <p class="project-summary"><strong>166K+ lines</strong> • <strong>217 commits</strong> • <strong>Zero production incidents</strong></p>
+                    <button class="expand-btn">+ Details</button>
+                    <p class="project-details">Designed and implemented production-grade API gateway infrastructure using Envoy Proxy and Kubernetes Gateway API on AWS EKS. Built type-safe configuration system with Pkl, mTLS certificate lifecycle management, zero-trust NetworkPolicies, and auto-scaling from 2-25 pods with 99.95%+ availability. Maintained 60+ infrastructure packages via FluxCD GitOps.</p>
+                    <div class="tags">
+                        <span>Envoy Proxy</span>
+                        <span>Kubernetes</span>
+                        <span>Pkl</span>
+                        <span>FluxCD</span>
+                        <span>mTLS</span>
+                        <span>Helm</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="glow-effect"></div>
+                    <h3>DataDog Observability Platform — 50+ EKS Clusters</h3>
+                    <p class="project-summary"><strong>5,633 lines</strong> • <strong>50+ clusters</strong> • Terraform module from scratch</p>
+                    <button class="expand-btn">+ Details</button>
+                    <p class="project-details">Built production-grade Terraform module for DataDog deployment across 50+ Amazon EKS clusters spanning test and performance environments. Implemented DaemonSet agents, Cluster Agent HA, OpenTelemetry collector integration, four-tag standardization system, Envoy metrics integration, and OIDC-based Vault secret management. Deployed across us-west-2 and us-east-1 with zero downtime.</p>
+                    <div class="tags">
+                        <span>Terraform</span>
+                        <span>DataDog</span>
+                        <span>Kubernetes</span>
+                        <span>OpenTelemetry</span>
+                        <span>Terragrunt</span>
+                        <span>AWS EKS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <h2><i class="fas fa-book-open"></i> Publication & Profiles</h2>
+            <div class="publications-grid">
+                <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/secure-cloudwatch-logs-using-macie.html" target="_blank" class="publication-card featured">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-type">AWS Prescriptive Guidance — Publication</span>
+                        <h3>Secure CloudWatch Logs Using Amazon Macie</h3>
+                        <p>Published pattern on AWS official documentation for implementing security best practices with Amazon Macie to protect sensitive data in CloudWatch Logs.</p>
+                        <span class="pub-link"><i class="fas fa-external-link-alt"></i> Read on AWS Docs</span>
+                    </div>
+                </a>
+                <a href="https://github.com/aws-samples/sample-transitive-dependency-analyzer" target="_blank" class="publication-card">
+                    <div class="pub-icon"><i class="fab fa-github"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-type">AWS Samples — Code Repository</span>
+                        <h3>Transitive Dependency Analyzer</h3>
+                        <p>Companion code repository for the above publication, published under AWS Samples. Analyzes transitive dependencies to help teams identify and manage dependency risks.</p>
+                        <span class="pub-link"><i class="fab fa-github"></i> View on GitHub</span>
+                    </div>
+                </a>
+                <a href="https://www.internationalwomensday.com/Speaker/2613/Anisha-Salunkhe" target="_blank" class="publication-card">
+                    <div class="pub-icon"><i class="fas fa-microphone-alt"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-type">International Women's Day — Speaker</span>
+                        <h3>IWD Speaker Profile</h3>
+                        <p>Featured on the International Women's Day platform for contributions to cloud architecture, technical leadership, and women in technology.</p>
+                        <span class="pub-link"><i class="fas fa-external-link-alt"></i> View Profile</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -601,7 +681,6 @@
                             <img src="images/KMS.png" alt="KMS" class="skill-logo">
                             <span>AWS KMS</span>
                         </div>
-
                         <div class="skill-item">
                             <i class="fas fa-cubes" style="color: #10b981;"></i>
                             <span>Microservices</span>
@@ -617,6 +696,30 @@
                         <div class="skill-item">
                             <img src="images/Route53.png" alt="Route 53" class="skill-logo">
                             <span>Amazon Route 53</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group" style="color: #7B42BC;"></i>
+                            <span>Terraform</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired" style="color: #AC6199;"></i>
+                            <span>Envoy Proxy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sync-alt" style="color: #3D6DCC;"></i>
+                            <span>FluxCD / GitOps</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-dog" style="color: #632CA6;"></i>
+                            <span>DataDog</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt" style="color: #326CE5;"></i>
+                            <span>Kyverno</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lock" style="color: #0DB7ED;"></i>
+                            <span>cert-manager</span>
                         </div>
                     </div>
                 </div>
@@ -699,7 +802,7 @@
                 <a href="https://www.credly.com/badges/edc30e0d-189b-476a-96d7-fe0c64d8ec30" target="_blank" class="cert-item">
                     <i class="fab fa-aws cert-icon"></i>
                     <h3>AWS Certified Solutions Architect Professional</h3>
-                    <p>2024</p>
+                    <p>2024 (Renewed 2026)</p>
                 </a>
                 <a href="https://www.credly.com/badges/c78b3eaa-f9e2-4bdb-909f-0d6ddf0f61e3" target="_blank" class="cert-item">
                     <i class="fab fa-aws cert-icon"></i>
@@ -744,7 +847,7 @@
                 <div class="cert-item">
                     <i class="fab fa-java cert-icon" style="color: #007396;"></i>
                     <h3>Core & Advanced Java</h3>
-                    <p>CMC Academy - 2016</p>
+                    <p>CMC Academy (TCS) - 2015</p>
                 </div>
             </div>
         </div>
