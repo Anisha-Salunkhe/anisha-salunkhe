@@ -2,7 +2,7 @@
 
 Personal portfolio showcasing 8+ years of experience in cloud architecture, infrastructure engineering, and distributed systems at Amazon Web Services.
 
-**[anisha-salunkhe.github.io](https://anisha-salunkhe.github.io)**
+**[anisha-salunkhe.github.io/anisha-salunkhe](https://anisha-salunkhe.github.io/anisha-salunkhe)**
 
 ---
 
@@ -41,8 +41,8 @@ AWS Solutions Architect Professional (Renewed 2026) · DevOps Professional · AI
 
 ```bash
 # Clone the repository
-git clone https://github.com/Anisha-Salunkhe/anisha-salunkhe.github.io.git
-cd anisha-salunkhe.github.io
+git clone https://github.com/Anisha-Salunkhe/anisha-salunkhe.git
+cd anisha-salunkhe
 
 # Start local server
 python3 -m http.server 8000
