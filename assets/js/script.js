@@ -263,5 +263,4 @@ document.addEventListener('DOMContentLoaded', function () {
     initExperienceItems();
     initProjectCards();
     initAchievementItems();
-    console.log('Portfolio initialized.');
 });

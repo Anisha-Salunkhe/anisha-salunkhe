@@ -1,5 +1,8 @@
 # .gitignore
 
+# Archive folder (documents not for website)
+archive/
+
 # Dependencies
 node_modules/
 package-lock.json
