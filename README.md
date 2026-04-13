@@ -33,33 +33,126 @@ Cloud Applications Architect at AWS with a track record of delivering enterprise
 
 AWS Solutions Architect Professional (Renewed 2026) · DevOps Professional · AI Practitioner · ML Associate · Developer Associate · Cloud Practitioner · Well-Architected · Cloud Economics · SAFe® 4 Agilist
 
-## Running Locally
+---
+
+## 🚀 Quick Start
+
+### Local Development
 
 ```bash
+# Clone the repository
 git clone https://github.com/Anisha-Salunkhe/anisha-salunkhe.github.io.git
 cd anisha-salunkhe.github.io
+
+# Start local server
 python3 -m http.server 8000
+
 # Open http://localhost:8000
 ```
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```
-├── index.html          # Portfolio site
-├── style.css           # Styles and animations
-├── script.js           # Interactive features
-├── images/             # AWS service logos
-└── Anisha_Salunkhe_Resume.pdf
+anisha-salunkhe/
+├── assets/
+│   ├── css/               # Stylesheets
+│   │   ├── style.css      # Main styles
+│   │   ├── animations.css # Animations
+│   │   └── aws-icons.css  # AWS service styles
+│   ├── js/                # JavaScript
+│   │   └── script.js      # Interactive features
+│   ├── images/            # Images and logos
+│   │   ├── logos/         # Company logos
+│   │   └── aws-services/  # AWS service icons
+│   └── documents/         # PDF resume
+├── config/                # Configuration files
+│   └── site-config.json   # Site configuration
+├── docs/                  # Documentation
+│   ├── SETUP.md          # Setup guide
+│   └── DEPLOYMENT.md     # Deployment guide
+├── index.html            # Main HTML file
+├── README.md             # This file
+└── .gitignore           # Git ignore rules
 ```
 
-## Built With
+---
 
-HTML5 · CSS3 · Vanilla JavaScript · Font Awesome · Google Fonts (Space Grotesk, JetBrains Mono) · Credly Embeds · Google Analytics
+## 🎨 Customization
 
-## Contact
+### Colors
+
+Edit CSS variables in `assets/css/style.css`:
+
+```css
+:root {
+    --primary: #10b981;    /* Main green color */
+    --secondary: #34d399;  /* Lighter green */
+    --accent: #6ee7b7;     /* Accent green */
+}
+```
+
+### Configuration
+
+Edit `config/site-config.json` to update:
+- Personal information
+- Social media links
+- Google Analytics ID
+- Feature toggles
+- Stats data
+
+### Content
+
+- **Personal Info**: Edit sections in `index.html`
+- **Images**: Add to `assets/images/`
+- **Resume**: Replace `assets/documents/Anisha_Salunkhe_Resume.pdf`
+
+---
+
+## 📚 Documentation
+
+- **[Setup Guide](docs/SETUP.md)** - Local development setup
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - GitHub Pages deployment
+
+---
+
+## 🛠️ Built With
+
+- HTML5
+- CSS3 (with CSS Variables & Animations)
+- Vanilla JavaScript (ES6+)
+- Font Awesome Icons
+- Google Fonts (Space Grotesk, JetBrains Mono)
+- Credly Badge Embeds
+- Google Analytics
+
+---
+
+## 🚀 Features
+
+- ✅ **Responsive Design** - Works on all devices
+- ✅ **Custom Cursor** - Interactive desktop experience
+- ✅ **Smooth Animations** - Professional transitions
+- ✅ **Collapsible Sections** - Expandable experience/projects
+- ✅ **Skills Scrolling** - Mouse drag + trackpad support
+- ✅ **Dark Theme** - Modern green accent (#10b981)
+- ✅ **Performance Optimized** - Fast loading times
+- ✅ **SEO Friendly** - Proper meta tags
+- ✅ **Accessible** - WCAG compliant
+
+---
+
+## 📞 Contact
 
 [Email](mailto:anisha.salunkhe@gmail.com) · [LinkedIn](https://linkedin.com/in/anishasalunkhe) · [GitHub](https://github.com/Anisha-Salunkhe) · [Stack Overflow](https://stackoverflow.com/users/6170603/anisha-salunkhe) · [Credly](https://www.credly.com/users/anisha-salunkhe.3fb7b79e)
 
 ---
 
-© 2026 Anisha Salunkhe · Jersey City, NJ
+## 📄 License
+
+© 2026 Anisha Salunkhe. All rights reserved.
+
+---
+
+**Made with ☕ & ❤️ in Jersey City, NJ**

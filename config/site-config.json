@@ -1,0 +1,29 @@
+{
+  "personal": {
+    "name": "Anisha Salunkhe",
+    "title": "Cloud Applications Architect & Infrastructure Engineer",
+    "location": "Jersey City, NJ",
+    "email": "anisha.salunkhe@gmail.com"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/anishasalunkhe/",
+    "github": "https://github.com/Anisha-Salunkhe",
+    "stackoverflow": "https://stackoverflow.com/users/6170603/anisha-salunkhe",
+    "credly": "https://www.credly.com/users/anisha-salunkhe.3fb7b79e"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-Z4G89D9P66"
+  },
+  "features": {
+    "customCursor": true,
+    "particleAnimation": true,
+    "smoothScroll": true,
+    "collapsibleSections": true
+  },
+  "stats": {
+    "transactions": "1M+",
+    "uptime": "99.9%",
+    "experience": "8+",
+    "clusters": "50+"
+  }
+}

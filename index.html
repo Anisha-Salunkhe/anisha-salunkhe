@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/aws-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.credly.com/assets/utilities/embed.js" async></script>
     
@@ -52,14 +54,12 @@
                 <h1 class="hero-name"><span class="typing-effect">Anisha Salunkhe</span></h1>
             </div>
             
-            <div class="hero-divider"></div>
-            
             <div class="hero-details">
                 <h2 class="hero-title">Cloud Applications Architect & Infrastructure Engineer</h2>
+                <br>
                 <p class="hero-subtitle">
-                    <span class="subtitle-highlight">Architecting enterprise-scale cloud infrastructure and distributed systems</span>
-                    <br>
-                    <span class="subtitle-specialization">Specializing in <span class="subtitle-tech">Serverless • Kubernetes • Infrastructure-as-Code • Observability</span></span>
+                    Architecting enterprise-scale cloud infrastructure and distributed systems<br>
+                    Specializing in <span class="subtitle-tech">Infrastructure-as-Code • Observability • AWS Solutions</span>
                 </p>
             </div>
             
@@ -137,9 +137,9 @@
     <section id="resume">
         <div class="container">
             <h2><i class="fas fa-file-download"></i> Resume</h2>
-            <p>Download my comprehensive resume for detailed technical experience, certifications, and project portfolio.</p>
+            <p>Comprehensive technical experience, certifications, and project portfolio</p>
             <div class="resume-download">
-                <a href="Anisha_Salunkhe_Resume.pdf" download="Anisha_Salunkhe_Resume.pdf" class="btn btn-primary btn-download">
+                <a href="assets/documents/Anisha_Salunkhe_Resume.pdf" download="Anisha_Salunkhe_Resume.pdf" class="btn btn-primary btn-download">
                     <i class="fas fa-download"></i> Download Resume (PDF)
                 </a>
             </div>
@@ -151,9 +151,14 @@
             <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
-                    <h3>Cloud Applications Architect</h3>
-                    <p class="company">Amazon Web Services, New York, NY</p>
-                    <p class="duration">November 2023 – Present</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/aws_logo.png" alt="AWS" class="company-logo aws-experience-logo">
+                        <div class="experience-title-group">
+                            <h3>Cloud Applications Architect</h3>
+                            <p class="company">Amazon Web Services, New York, NY</p>
+                        </div>
+                        <p class="duration">November 2023 – Present</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Architected enterprise WorkOrder Management System processing <strong>1M+ WorkOrders</strong> with sub-second latency</li>
                         <li>Built production-grade API Gateway infrastructure with <strong>166K+ lines</strong> of IaC and <strong>zero production incidents</strong></li>
@@ -174,9 +179,14 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Associate Cloud Applications Developer</h3>
-                    <p class="company">Amazon Web Services, New York, NY</p>
-                    <p class="duration">July 2021 – October 2023</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/aws_logo.png" alt="AWS" class="company-logo aws-experience-logo">
+                        <div class="experience-title-group">
+                            <h3>Associate Cloud Applications Developer</h3>
+                            <p class="company">Amazon Web Services, New York, NY</p>
+                        </div>
+                        <p class="duration">July 2021 – October 2023</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Increased payment acceptance by <strong>32%</strong> for international cinema chain</li>
                         <li>Reduced IAM provisioning overhead by <strong>60%</strong> for pharmaceutical enterprise</li>
@@ -193,9 +203,17 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Professional Services Consultant Intern</h3>
-                    <p class="company">Amazon Web Services, New York, NY</p>
-                    <p class="duration">June 2020 – August 2020</p>
+
+
+
+                    <div class="experience-header">
+                        <img src="assets/images/logos/aws_logo.png" alt="AWS" class="company-logo aws-experience-logo">
+                        <div class="experience-title-group">
+                            <h3>Professional Services Consultant Intern</h3>
+                            <p class="company">Amazon Web Services, New York, NY</p>
+                        </div>
+                        <p class="duration">June 2020 – August 2020</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Built AWS migration tool with <strong>3-tier architecture</strong> orchestrating <strong>8 AWS services</strong></li>
                         <li>Implemented real-time logging with CloudWatch integration</li>
@@ -208,9 +226,14 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Graduate Student Developer</h3>
-                    <p class="company">NYU Information Technology, New York, NY</p>
-                    <p class="duration">March 2020 – December 2020</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/nyu.png" alt="NYU" class="company-logo">
+                        <div class="experience-title-group">
+                            <h3>Graduate Student Developer</h3>
+                            <p class="company">NYU Information Technology, New York, NY</p>
+                        </div>
+                        <p class="duration">March 2020 – December 2020</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Built intelligent automation with <strong>RPA and UiPath</strong></li>
                         <li>Led agile ceremonies and managed sprint deliverables</li>
@@ -223,9 +246,14 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Teaching Assistant</h3>
-                    <p class="company">New York University, New York, NY</p>
-                    <p class="duration">September 2019 – December 2019</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/nyu.png" alt="NYU" class="company-logo">
+                        <div class="experience-title-group">
+                            <h3>Teaching Assistant</h3>
+                            <p class="company">New York University, New York, NY</p>
+                        </div>
+                        <p class="duration">September 2019 – December 2019</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Mentored <strong>38 students</strong> in Computer Science fundamentals</li>
                         <li>Evaluated <strong>11 technical assignments</strong> with comprehensive code reviews</li>
@@ -238,9 +266,14 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Associate Software Engineer</h3>
-                    <p class="company">Mastercard Technologies Pvt. Ltd., Pune, India</p>
-                    <p class="duration">July 2017 – July 2019</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/Mastercard-logo.svg" alt="Mastercard" class="company-logo">
+                        <div class="experience-title-group">
+                            <h3>Associate Software Engineer</h3>
+                            <p class="company">Mastercard Technologies Pvt. Ltd., Pune, India</p>
+                        </div>
+                        <p class="duration">July 2017 – July 2019</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Built enterprise messaging platform serving <strong>2000+ clients</strong> with <strong>99.99% uptime</strong></li>
                         <li>Optimized performance by <strong>13.67%</strong>, achieving <strong>3780 TPS</strong></li>
@@ -258,9 +291,14 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Project Intern</h3>
-                    <p class="company">TE Connectivity, Pune, India</p>
-                    <p class="duration">July 2016 – December 2016</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/TE_Connectivity_logo.png" alt="TE Connectivity" class="company-logo">
+                        <div class="experience-title-group">
+                            <h3>Project Intern</h3>
+                            <p class="company">TE Connectivity, Pune, India</p>
+                        </div>
+                        <p class="duration">July 2016 – December 2016</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Built IoT platform with <strong>71 Raspberry Pi nodes</strong> for factory monitoring</li>
                         <li>Transformed paper-based workflows to digital with MySQL database</li>
@@ -274,9 +312,14 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-                    <h3>Project Intern</h3>
-                    <p class="company">Bitwise Solutions, Pune, India</p>
-                    <p class="duration">April 2016 – June 2016</p>
+                    <div class="experience-header">
+                        <img src="assets/images/logos/bitwise.png" alt="Bitwise Solutions" class="company-logo">
+                        <div class="experience-title-group">
+                            <h3>Project Intern</h3>
+                            <p class="company">Bitwise Solutions, Pune, India</p>
+                        </div>
+                        <p class="duration">April 2016 – June 2016</p>
+                    </div>
                     <ul class="experience-highlights">
                         <li>Developed custom <strong>Jenkins plugin</strong> for CI/CD automation</li>
                         <li>Implemented comprehensive testing suite with UAT cases</li>
@@ -300,7 +343,6 @@
                     <div class="glow-effect"></div>
                     <h3>Enterprise WorkOrder Management System - Film Studio</h3>
                     <p class="project-summary"><strong>1M+ WorkOrders</strong> • <strong>50% overhead reduction</strong> • <strong>21,000 hours saved annually</strong></p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Architected enterprise-scale orchestration platform for major film studio processing 1M+ WorkOrders using Netflix Conductor workflow engine and DynamoDB, delivering millisecond-latency queries. Implemented event-driven microservices with EventBridge and Lambda, slashing operational overhead by 50%—eliminating 21,000 manual hours annually while accelerating content delivery pipelines.</p>
                     <div class="tags">
                         <span>Netflix Conductor</span>
@@ -314,7 +356,6 @@
                     <div class="glow-effect"></div>
                     <h3>Media Processing Integration</h3>
                     <p class="project-summary"><strong>40% faster delivery</strong> • <strong>60% reduction in QC cycles</strong></p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Integrated third-party media processing engines with AWS Step Functions state machines and S3, unlocking massively parallel transcoding capabilities. Accelerated delivery by 40% through optimized parallel workflows, implemented intelligent exception handling with automated QC validation, slashing processing cycles by 60%.</p>
                     <div class="tags">
                         <span>Step Functions</span>
@@ -327,7 +368,6 @@
                     <div class="glow-effect"></div>
                     <h3>Scalable Payment Service - Cinema Chain</h3>
                     <p class="project-summary"><strong>32% increase</strong> in payment acceptance • Multi-region failover</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Engineered highly available payment processing service for international cinema chain with multi-region failover. Built RESTful microservices with intelligent retry logic and circuit breakers, driving 32% increase in payment acceptance across Americas through resilient API design.</p>
                     <div class="tags">
                         <span>AWS Lambda</span>
@@ -340,7 +380,6 @@
                     <div class="glow-effect"></div>
                     <h3>IAM Active Directory Sync - Pharmaceutical Enterprise</h3>
                     <p class="project-summary"><strong>60% reduction</strong> in manual overhead • <strong>1000+ AWS accounts</strong></p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Delivered enterprise IAM automation platform for global pharmaceutical company, transforming user-based permissions to role-based access control (RBAC). Engineered Active Directory synchronization with automated role provisioning and lifecycle management, eliminating 60% of manual overhead. Deployed at scale across 1000+ AWS accounts.</p>
                     <div class="tags">
                         <span>AWS IAM</span>
@@ -354,7 +393,6 @@
                     <div class="glow-effect"></div>
                     <h3>VPCx Console - Self-Service Portal</h3>
                     <p class="project-summary">Serverless architecture • Eliminated infrastructure costs</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Developed serverless self-service portal with RESTful APIs powered by AWS Lambda for multi-cloud orchestration. Transformed legacy server-based polling to event-driven serverless architecture, enabling real-time data transformation while eliminating EC2 and database infrastructure costs.</p>
                     <div class="tags">
                         <span>API Gateway</span>
@@ -367,7 +405,6 @@
                     <div class="glow-effect"></div>
                     <h3>Multi-Factor Authentication</h3>
                     <p class="project-summary">Lambda-based OTP • Enhanced security posture</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Implemented MFA security layer for VPCx console using Lambda-based OTP generation, adding cryptographic time-based authentication beyond traditional credentials—fortifying security posture for pharmaceutical enterprise.</p>
                     <div class="tags">
                         <span>Lambda</span>
@@ -379,7 +416,6 @@
                     <div class="glow-effect"></div>
                     <h3>Flexera Auditing System</h3>
                     <p class="project-summary"><strong>70% reduction</strong> in compliance overhead • Automated reporting</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Automated license compliance and auditing system for RDS and EC2 fleets. Built scheduled reporting pipeline generating Excel-formatted audit reports, eliminating manual data collection and slashing compliance overhead by 70%.</p>
                     <div class="tags">
                         <span>RDS</span>
@@ -392,7 +428,6 @@
                     <div class="glow-effect"></div>
                     <h3>Enterprise Messaging System - Mastercard</h3>
                     <p class="project-summary"><strong>2000+ clients</strong> • <strong>99.99% uptime</strong> • <strong>3780 TPS</strong></p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Spearheaded development of geo-distributed enterprise messaging platform serving 2000+ production clients with 99.99% uptime. Optimized throughput by 13.67%, achieving 3780 TPS through JVM heap tuning and garbage collection optimization. Maintained SQALE rating "A" via SonarQube static analysis.</p>
                     <div class="tags">
                         <span>Java</span>
@@ -405,7 +440,6 @@
                     <div class="glow-effect"></div>
                     <h3>Breast Cancer Detection ML System</h3>
                     <p class="project-summary"><strong>85.4% accuracy</strong> • Spark MLlib • Decision Tree classifiers</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Engineered machine learning pipeline for early-stage breast cancer detection using Spark MLlib. Built ETL workflows and trained Decision Tree classifiers on multi-resolution histopathology images, delivering 85.4% prediction accuracy across 4 magnification levels.</p>
                     <div class="tags">
                         <span>Spark</span>
@@ -418,7 +452,6 @@
                     <div class="glow-effect"></div>
                     <h3>Election Forecast Time Series Analysis</h3>
                     <p class="project-summary"><strong>85% accuracy</strong> • Twitter sentiment analysis • Time-series models</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Built predictive analytics platform using time-series regression models (linear and polynomial) to forecast Democratic Primary Election outcomes. Integrated Twitter sentiment analysis pipeline, delivering 85% prediction accuracy through multi-modal data fusion.</p>
                     <div class="tags">
                         <span>Python</span>
@@ -431,7 +464,6 @@
                     <div class="glow-effect"></div>
                     <h3>API Gateway Infrastructure — Envoy Proxy</h3>
                     <p class="project-summary"><strong>166K+ lines</strong> • <strong>217 commits</strong> • <strong>Zero production incidents</strong></p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Designed and implemented production-grade API gateway infrastructure using Envoy Proxy and Kubernetes Gateway API on AWS EKS. Built type-safe configuration system with Pkl, mTLS certificate lifecycle management, zero-trust NetworkPolicies, and auto-scaling from 2-25 pods with 99.95%+ availability. Maintained 60+ infrastructure packages via FluxCD GitOps.</p>
                     <div class="tags">
                         <span>Envoy Proxy</span>
@@ -446,7 +478,6 @@
                     <div class="glow-effect"></div>
                     <h3>DataDog Observability Platform — 50+ EKS Clusters</h3>
                     <p class="project-summary"><strong>5,633 lines</strong> • <strong>50+ clusters</strong> • Terraform module from scratch</p>
-                    <button class="expand-btn">+ Details</button>
                     <p class="project-details">Built production-grade Terraform module for DataDog deployment across 50+ Amazon EKS clusters spanning test and performance environments. Implemented DaemonSet agents, Cluster Agent HA, OpenTelemetry collector integration, four-tag standardization system, Envoy metrics integration, and OIDC-based Vault secret management. Deployed across us-west-2 and us-east-1 with zero downtime.</p>
                     <div class="tags">
                         <span>Terraform</span>
@@ -525,7 +556,7 @@
                         </div>
 
                         <div class="skill-item">
-                            <img src="images/aws_cdk.png" alt="AWS CDK" class="skill-logo">
+                            <img src="assets/images/aws-services/aws_cdk.png" alt="AWS CDK" class="skill-logo">
                             <span>AWS CDK</span>
                         </div>
                         <div class="skill-item">
@@ -551,27 +582,27 @@
                     <h3>AWS & Cloud Infrastructure</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <img src="images/aws_lambda.png" alt="Lambda" class="skill-logo">
+                            <img src="assets/images/aws-services/aws_lambda.png" alt="Lambda" class="skill-logo">
                             <span>AWS Lambda</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/eventbridge.png" alt="EventBridge" class="skill-logo">
+                            <img src="assets/images/aws-services/eventbridge.png" alt="EventBridge" class="skill-logo">
                             <span>Amazon EventBridge</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/S3.png" alt="S3" class="skill-logo">
+                            <img src="assets/images/aws-services/S3.png" alt="S3" class="skill-logo">
                             <span>Amazon S3</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/VPC.png" alt="VPC" class="skill-logo">
+                            <img src="assets/images/aws-services/VPC.png" alt="VPC" class="skill-logo">
                             <span>Amazon VPC</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/CloudFormation.png" alt="CloudFormation" class="skill-logo">
+                            <img src="assets/images/aws-services/CloudFormation.png" alt="CloudFormation" class="skill-logo">
                             <span>AWS CloudFormation</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/EC2.png" alt="EC2" class="skill-logo">
+                            <img src="assets/images/aws-services/EC2.png" alt="EC2" class="skill-logo">
                             <span>Amazon EC2</span>
                         </div>
                         <div class="skill-item">
@@ -583,7 +614,7 @@
                             <span>Kubernetes</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/Amplify.png" alt="Amplify" class="skill-logo">
+                            <img src="assets/images/aws-services/Amplify.png" alt="Amplify" class="skill-logo">
                             <span>AWS Amplify</span>
                         </div>
                         <div class="skill-item">
@@ -597,7 +628,7 @@
                     <h3>Data & Analytics</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <img src="images/DynamoDB.png" alt="DynamoDB" class="skill-logo">
+                            <img src="assets/images/aws-services/DynamoDB.png" alt="DynamoDB" class="skill-logo">
                             <span>Amazon DynamoDB</span>
                         </div>
                         <div class="skill-item">
@@ -605,39 +636,39 @@
                             <span>Kafka</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/Athena.png" alt="Athena" class="skill-logo">
+                            <img src="assets/images/aws-services/Athena.png" alt="Athena" class="skill-logo">
                             <span>Amazon Athena</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/Redshift.png" alt="Redshift" class="skill-logo">
+                            <img src="assets/images/aws-services/Redshift.png" alt="Redshift" class="skill-logo">
                             <span>Amazon Redshift</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/QuickSight.png" alt="QuickSight" class="skill-logo">
+                            <img src="assets/images/aws-services/QuickSight.png" alt="QuickSight" class="skill-logo">
                             <span>Amazon QuickSight</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/Step Functions.png" alt="Step Functions" class="skill-logo">
+                            <img src="assets/images/aws-services/Step Functions.png" alt="Step Functions" class="skill-logo">
                             <span>AWS Step Functions</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/SQS.png" alt="SQS" class="skill-logo">
+                            <img src="assets/images/aws-services/SQS.png" alt="SQS" class="skill-logo">
                             <span>Amazon SQS</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/API Gateway.png" alt="API Gateway" class="skill-logo">
+                            <img src="assets/images/aws-services/API Gateway.png" alt="API Gateway" class="skill-logo">
                             <span>Amazon API Gateway</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/SNS.png" alt="SNS" class="skill-logo">
+                            <img src="assets/images/aws-services/SNS.png" alt="SNS" class="skill-logo">
                             <span>Amazon SNS</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/AppSync.png" alt="AppSync" class="skill-logo">
+                            <img src="assets/images/aws-services/AppSync.png" alt="AppSync" class="skill-logo">
                             <span>AWS AppSync</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/Aurora.png" alt="Aurora" class="skill-logo">
+                            <img src="assets/images/aws-services/Aurora.png" alt="Aurora" class="skill-logo">
                             <span>Amazon Aurora</span>
                         </div>
                         <div class="skill-item">
@@ -674,11 +705,11 @@
                             <span>SonarQube</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/IAM.png" alt="IAM" class="skill-logo">
+                            <img src="assets/images/aws-services/IAM.png" alt="IAM" class="skill-logo">
                             <span>AWS IAM</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/KMS.png" alt="KMS" class="skill-logo">
+                            <img src="assets/images/aws-services/KMS.png" alt="KMS" class="skill-logo">
                             <span>AWS KMS</span>
                         </div>
                         <div class="skill-item">
@@ -694,7 +725,7 @@
                             <span>OpenTelemetry</span>
                         </div>
                         <div class="skill-item">
-                            <img src="images/Route53.png" alt="Route 53" class="skill-logo">
+                            <img src="assets/images/aws-services/Route53.png" alt="Route 53" class="skill-logo">
                             <span>Amazon Route 53</span>
                         </div>
                         <div class="skill-item">
@@ -766,14 +797,6 @@
                     <h3><span>National Creativity Aptitude Test</span></h3>
                     <p>93% Score (2013)</p>
                 </div>
-                <div class="achievement-item" onclick="this.classList.toggle('expanded')">
-                    <h3><span>Innovation 2015 - CCOEW</span></h3>
-                    <p>1st Prize (Atlascope Project)</p>
-                </div>
-                <div class="achievement-item" onclick="this.classList.toggle('expanded')">
-                    <h3><span>Tesla 2015 - MITCOE</span></h3>
-                    <p>1st Prize (Web Surfers), 2nd Prize (Google Whack)</p>
-                </div>
 
             </div>
         </div>
@@ -844,11 +867,6 @@
                     <h3>Information Security Specialist</h3>
                     <p>Cybercure Solutions® - 2016</p>
                 </div>
-                <div class="cert-item">
-                    <i class="fab fa-java cert-icon" style="color: #007396;"></i>
-                    <h3>Core & Advanced Java</h3>
-                    <p>CMC Academy (TCS) - 2015</p>
-                </div>
             </div>
         </div>
     </section>
@@ -856,7 +874,7 @@
     <section id="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p>Open to discussing cloud architecture opportunities, technical collaborations, and innovative projects.</p>
+            <p>Interested in cloud architecture opportunities and technical collaborations</p>
             <div class="contact-links">
                 <a href="mailto:anisha.salunkhe@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/Anisha-Salunkhe" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -871,7 +889,7 @@
         <p>&copy; 2026 Anisha Salunkhe. All rights reserved.</p>
         <p>Jersey City, NJ</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
         document.querySelectorAll('.expand-btn').forEach(btn => {
             btn.onclick = function() {
