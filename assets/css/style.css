@@ -157,11 +157,11 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 40px;
+    padding: 0.8rem 40px;
     position: relative;
     z-index: 1;
     flex-wrap: nowrap;
-    min-height: 70px;
+    min-height: 60px;
 }
 
 nav h1 {
@@ -172,6 +172,8 @@ nav h1 {
     position: relative;
     display: flex;
     align-items: center;
+    line-height: 1;
+    margin: 0;
 }
 
 nav h1::before {
@@ -184,6 +186,7 @@ nav h1::before {
     line-height: 1;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 nav h1::after {
@@ -196,6 +199,7 @@ nav h1::after {
     line-height: 1;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .logo {
@@ -213,12 +217,14 @@ nav h1::after {
     background-clip: text;
     animation: shimmer-text 3s linear infinite, logoFloat 3s ease-in-out infinite;
     position: relative;
-    display: inline-block;
-    padding: 0.5rem 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 1rem;
     border: 2px solid transparent;
     border-radius: 12px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
+    line-height: 1;
 }
 
 .logo a::before {
@@ -271,6 +277,9 @@ nav ul {
     gap: 0.5rem;
     flex-wrap: nowrap;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 nav a {
@@ -279,10 +288,14 @@ nav a {
     font-weight: 500;
     transition: var(--transition);
     font-size: 1.3rem;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a::before {
