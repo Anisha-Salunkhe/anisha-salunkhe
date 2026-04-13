@@ -1535,11 +1535,12 @@ footer p {
 }
 
 .location-inline::before {
-    content: ' | ' !important;
+    content: '\007C' !important;
     position: absolute;
     left: 0;
     color: #10b981;
-    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    padding: 0 0.3rem;
 }
 
 .experience-item.collapsed h3 {
