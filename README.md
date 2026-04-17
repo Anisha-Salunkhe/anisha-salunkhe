@@ -70,11 +70,11 @@ anisha-salunkhe/
 ├── config/                # Configuration files
 │   └── site-config.json   # Site configuration
 ├── docs/                  # Documentation
-│   ├── SETUP.md          # Setup guide
-│   └── DEPLOYMENT.md     # Deployment guide
-├── index.html            # Main HTML file
-├── README.md             # This file
-└── .gitignore           # Git ignore rules
+│   ├── SETUP.md           # Setup guide
+│   └── DEPLOYMENT.md      # Deployment guide
+├── index.html             # Main HTML file
+├── README.md              # This file
+└── .gitignore             # Git ignore rules
 ```
 
 ---
